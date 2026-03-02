@@ -39,15 +39,10 @@
 
 @media screen and (max-width: 900px)
 {
-    .page
-    {
-        background-color: darkgray;
-
-    }
     
     .title
     {
-        font-size: 60px;
+        font-size: 52px;
     }
 
     .description
