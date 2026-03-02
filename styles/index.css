@@ -1,4 +1,4 @@
-body
+.page
 {
     background-color: black;
 }
@@ -39,7 +39,7 @@ body
 
 @media screen and (max-width: 900px)
 {
-    body
+    .page
     {
         background-color: darkgray;
 
