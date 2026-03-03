@@ -32,6 +32,8 @@
     font-weight: 700;
     color: yellow;
     font-style: italic;
+    text-decoration: underline dotted;
+    text-underline-offset: 12px;
 
 
 }
