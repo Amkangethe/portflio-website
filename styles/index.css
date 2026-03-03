@@ -36,6 +36,17 @@
 
 }
 
+.description-2
+{
+    font-size: 17px;
+    margin: 30px 0 0 0;
+    font-weight: 700;
+    color: yellow;
+    font-style: italic;
+
+
+}
+
 
 @media screen and (max-width: 900px)
 {
