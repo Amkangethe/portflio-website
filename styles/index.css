@@ -103,6 +103,10 @@
 
 @media screen and (max-width: 900px)
 {
+    .header-portfolio-name
+    {
+        font-size: 30px;
+    }
     
     
 
