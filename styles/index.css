@@ -9,10 +9,11 @@
 .header
 {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 20px 20px 0px 20px;
     align-items: center;
     justify-content: center;
+    row-gap: 30px;
 }
 
 .header-me
@@ -20,9 +21,6 @@
     display:flex;
     flex-direction: row;
     align-items: center;
-    
-    
-
 }
 
 .header-portfolio-picture
@@ -41,64 +39,72 @@
     text-underline-offset: 13px;
 }
 
-
 .header-links
 {
-    height: 40px;
-    width: 320px;
-    padding: 10px 40px;
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    column-gap: 30px;
+    
+
+    
+}
+
+.linkedin-icon
+{
     background-color: white;
-    column-gap: 20px;
-    border: 2px grey solid;
-    
-}
+    padding: 20px 30px;
+    height: 20px;
+    border-radius: 80px;
+    border: 2px lightgrey solid;
+    transition: box-shadow .15s;
 
 
-
-
-a
-{
-    height: 30px;
-    overflow: hidden; 
-    position: relative;
-    padding: 10px 20px;
-    
-}
-
-.linkedin-icon, .github-icon
-{
-    height: 100%;
-    transition: box-shadow 2s;
-
-    
-    
 }
 
 .github-icon
 {
-    transform: scale(1.2); 
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    height: 40px;
+    border-radius: 80px;
+    border: 2px lightgrey solid;
+    transition: box-shadow .15s;
 }
+
+.linkedin-icon:hover, .github-icon:hover
+{
+    box-shadow: 0 5px 8px rgba(100, 100, 100, 0.8);
+
+}
+
+.linkedin-icon:active, .github-icon:active
+{
+    opacity: 0.5;
+    box-shadow: 0 2px 8px rgba(100, 100, 100, 0.8);
+
+}
+
+
+.click-me
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+}
+
 
 
 
 @media screen and (max-width: 900px)
 {
     
-    .header
-    {
-        flex-direction: column;
-        
-    }
-
-    .header-links
-    {
-        margin-top: 30px;
-    }
+    
 
     
 }
