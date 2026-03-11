@@ -1,0 +1,152 @@
+body
+{
+    margin: 0;
+    margin-bottom: 1000px;
+}
+
+.header
+{
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar
+{
+    display: flex;
+    position: fixed; /* stay visible while scrolling */
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    gap: 12px;
+    padding: 0 15px;
+    background-color: white;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: .5px lightgrey solid;
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    border-radius: 18px;
+    justify-content: center;
+    align-items: center;
+    transition: padding .18s ease, box-shadow .18s ease;
+}
+
+.menu-bar:hover
+{
+    padding: 0 30px; /* slightly grow while keeping content-size behavior */
+    box-shadow: 0 6px 12px rgba(0,0,0,.12);
+}
+
+.menu-item
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* initial explicit width so it can transition */
+    transition: width .15s ease;
+}
+
+.menu-item:hover
+{
+    width: 30px;
+}
+
+.home-icon, .cv-icon
+{
+    height: 20px;
+
+}
+
+.profile-hero
+{
+    margin-top: 130px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+}
+
+.profile-hero-name
+{
+    font-family: Inter, "Inter Fallback";
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.profile-hero-subtitle
+{
+    font-family: Inter, "Inter Fallback";
+    font-size: 18px;
+    height: 28px;
+    color: rgb(115, 115, 115);
+    margin: 0px;
+
+}
+
+.profile-hero-role
+{
+    color: black;
+    font-family: Inter, "Inter Fallback";
+    font-size: 20px;
+    height: 56px;
+    margin: 0px;
+
+    
+}
+
+.rounded-video {
+    margin-left: 110px;
+    width: 180px;
+    height: 180px;
+    border-radius: 1000px;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    box-shadow: 0 2px 5px rgb(0,0,0, .2);
+    border: .5px rgb(228, 226, 226) solid;
+}
+
+
+
+
+.links
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    height: auto;
+    column-gap: 10px;
+
+}
+
+.github-icon, .linkedin-icon
+{
+    height: 30px;
+    filter: invert(60%);
+    transition: filter;
+
+}
+
+.github-icon:hover, .linkedin-icon:hover
+{
+    filter: invert(0%);
+}
+
+
+
+@media screen and (max-width: 900px)
+{
+
+    
+
+    
+    
+
+    
+}
