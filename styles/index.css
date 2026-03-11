@@ -121,7 +121,10 @@ body
     align-items: center;
     margin-top: 40px;
     height: auto;
-    column-gap: 10px;
+    column-gap: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightcoral;
 
 }
 
