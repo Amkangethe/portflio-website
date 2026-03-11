@@ -7,31 +7,36 @@
 
     </head>
     <body class="page">
+
+	<!-- Header Bar -->
 		<div class="header">
+
+		<!-- Menu Bar -->
 			<div class="menu-bar">
-				<a href="https://www.allankangethe.com" class="menu-item">
+				<a href="#top" class="menu-item">
 					<img class="home-icon" src="icons/home.png">
 				</a>
 				<a href="Allan_Kangethe_Resume.pdf" class="menu-item" target="_parent" rel="noopener noreferrer">
 					<img class="cv-icon" src="icons/cv.png">
 				</a>
-				
 			</div>
 		</div>
 
+	<!-- Profile Intro -->
 		<div class="profile-hero">
 			<div class="profile-hero-info">
 				<p class="profile-hero-name">Allan Kangethe</p>
 				<p class="profile-hero-subtitle">B.S.</p>
 				<p class="profile-hero-role">Gradute Student</p>
 			</div>
-			<div>
-				<video id="profileVideo" autoplay muted playsinline loop preload="auto" class="rounded-video">
+			<div class="profile-video-element">
+				<video id="profileVideo" autoplay muted playsinline loop preload="auto" class="profile-hero-video">
 					<source src="./videos/profile-hero-video-small.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
 
+	<!-- Links to External Pages -->
 		<div class="links">
 				<a href="https://github.com/Amkangethe" target="_blank">
 					<img class="github-icon" src="icons/github.png">
@@ -48,25 +53,6 @@
 		</video>
 	-->
 
-	<script>
-		const video = document.getElementById("profileVideo");
-
-		video.muted = true;
-		video.defaultMuted = true;
-		video.playsInline = true;
-
-		const tryPlay = () => {
-			const p = video.play();
-			if (p !== undefined) {
-			p.catch(() => {});
-			}
-		};
-
-		window.addEventListener("load", tryPlay);
-		document.addEventListener("visibilitychange", () => {
-			if (!document.hidden) tryPlay();
-		});
-	</script>
 			
     </body>
 </html>
