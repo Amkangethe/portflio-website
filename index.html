@@ -26,7 +26,7 @@
 				<p class="profile-hero-role">Gradute Student</p>
 			</div>
 			<div>
-				<video id="profileVideo" autoplay muted playsinline loop preload="auto" class="rounded-video">
+				<video autoplay muted playsinline webkit-playsinline preload="auto" class="rounded-video">
 					<source src="./videos/profile-hero-video-small.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -48,25 +48,6 @@
 		</video>
 	-->
 
-	<script>
-		const video = document.getElementById("profileVideo");
-
-		video.muted = true;
-		video.defaultMuted = true;
-		video.playsInline = true;
-
-		const tryPlay = () => {
-			const p = video.play();
-			if (p !== undefined) {
-			p.catch(() => {});
-			}
-		};
-
-		window.addEventListener("load", tryPlay);
-		document.addEventListener("visibilitychange", () => {
-			if (!document.hidden) tryPlay();
-		});
-	</script>
 			
     </body>
 </html>
