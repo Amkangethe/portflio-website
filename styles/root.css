@@ -4,9 +4,9 @@
   /*WHOLE PAGE*/
   --page-bg: #f7f6f3;        /*background color for the whole page.*/
   --text: #0f172a;           /*default text color.*/
-  --glow-blue: rgba(139, 221, 228, 0.205);
-  --glow-warm: rgba(245, 179, 112,  0.205);
-  --glow-green: rgba(2, 94, 57, 0.205);
+  --glow-blue: rgba(139, 221, 228, 0.486);
+  --glow-warm: rgba(245, 179, 112, 0.397);
+  --glow-green: rgba(75, 228, 167, 0.377);
   --glow-base-top: rgba(255,255,255,.92);
   --glow-base-bot: rgba(255,255,255,.55);
   --grid-line: rgba(228, 228, 228, 0.411);
