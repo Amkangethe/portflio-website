@@ -43,7 +43,7 @@ html[data-theme="dark"] {
     align-items: center;
     overflow: hidden;
 
-    margin-top: 0;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     height: auto;
@@ -139,6 +139,34 @@ html[data-theme="dark"] {
     transform: scale(1.82) translateY(28px);
 }
 
+@media screen and (max-width: 900px)
+{
+    .profile-hero
+    {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .profile-hero-info
+    {
+        align-items: center;
+        padding: 0 20px;
+        
+    }
+    .profile-hero-name
+    {
+        margin: 0px 0 0 0;
+    }
+    .profile-hero-role
+    {
+        margin-bottom: 20px;
+    }
+    .profile-video
+    {
+        order: -1;
+    }
+}
 
 
 
