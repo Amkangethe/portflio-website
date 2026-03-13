@@ -145,5 +145,10 @@ body.snap > .section { scroll-snap-align: start; }
     {
         padding-top: 40px;
     }
+    .profile-description
+    {
+      flex-direction: column;
+    }
+    
 
 }
