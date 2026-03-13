@@ -129,3 +129,19 @@ html[data-theme="dark"] {
     cursor: default;
     
 }
+
+@media screen and (max-width: 900px)
+{
+    
+    .quick-links
+    {
+        margin-top: 40px;
+    }
+    .external-links
+    {
+        padding-top: 40px;
+    }
+    
+    
+
+}
