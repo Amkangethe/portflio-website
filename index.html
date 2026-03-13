@@ -2,61 +2,74 @@
 <html>
     <head>
 		<title>Allan Kangethe</title>
-		<link rel="stylesheet" href="./styles/index.css">
+		<link rel="stylesheet" href="./styles/root.css">
+		<link rel="stylesheet" href="./styles/header.css">
+		<link rel="stylesheet" href="./styles/section-1/section-1.css">
+		<link rel="stylesheet" href="./styles/section-1/profile.css">
+		
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
-    <body class="page">
-
-	<!-- Header Bar -->
-		<div class="header">
-
-		<!-- Menu Bar -->
-			<div class="menu-bar">
-				<a href="#top" class="menu-item">
-					<img class="home-icon" src="icons/home.png">
-				</a>
-				<a href="Allan_Kangethe_Resume.pdf" class="menu-item" target="_parent" rel="noopener noreferrer">
-					<img class="cv-icon" src="icons/cv.png">
-				</a>
-			</div>
-		</div>
-
-	<!-- Profile Intro -->
-		<div class="profile-hero">
-			<div class="profile-hero-info">
-				<p class="profile-hero-name">Allan Kangethe</p>
-				<p class="profile-hero-subtitle">B.S.</p>
-				<p class="profile-hero-role">Gradute Student</p>
-			</div>
-			<div class="profile-video-element">
-				<video autoplay muted playsinline preload="auto" class="profile-hero-video">
-					<source src="./videos/profile-hero-video-small.mp4" type="video/mp4">
-				</video>
-			</div>
-		</div>
-
-	<!-- Links to External Pages -->
-		<div class="links">
-				<a href="https://github.com/Amkangethe" target="_blank">
-					<img class="github-icon" src="icons/github.png">
-				</a>
-				<a href="https://www.linkedin.com/in/allankangethe/" target="_blank">
-					<img class="linkedin-icon" src="icons/linkedin.png">
-				</a>
-				
-		</div>
-
-	<!--
-	<div class="about-section">
-		<p style="margin: 40px 0 0 0;">About:</p>
-		<p style="margin:0;">Hi, I'm Allan Kangethe &#128075;</p>
-
-	</div>
-	-->
-
-		
+    <body>
+		<!-- Section 1-->
+		<section class="section-1">
+			<div class="section-1-bg" aria-hidden="true"></div>
 			
-    </body>
+			<!-- Header -->
+			<div class="header">
+				<a href="#top" class="header-logo">Allan Kangethe</a>
+				<div class="menu">
+					<a class="menu-item"></a>
+					<a class="menu-item"></a>
+					<a class="menu-item"></a>
+					<a class="menu-item"></a>
+					<button id="themeToggle">theme</button>
+				</div>
+			</div>
+
+			<!-- Profile Card -->
+			<div class="profile-hero">
+				<div class="profile-hero-info">
+					<p class="profile-hero-name">Allan Kangethe</p>
+					<p class="profile-hero-title">Graduate Student</p>
+					<p class="profile-hero-role">AI/ML & Software Engineering</p>
+
+				</div>
+				<div class="profile-video">
+					<div class="profile-video-outer-circle">
+						<div class="profile-video-element">
+							<video autoplay muted playsinline preload="auto" class="profile-hero-video">
+								<source src="./videos/profile-hero-video-small.mp4" type="video/mp4">
+							</video>
+						</div>
+
+					</div>
+
+					<!-- Profile Card 
+					<video autoplay muted playsinline preload="auto" class="profile-hero-video">
+						<source src="./videos/profile-hero-video-small.mp4" type="video/mp4">
+					</video> -->
+					
+
+				</div>
+
+			</div>
+
+			
+		</section>
+
+		<main class="page">
+			<!-- everything else -->
+		</main>
+
+		<script>
+			const root = document.documentElement;
+			document.getElementById("themeToggle").onclick = () => {
+				root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+			};
+		</script>
+		
+</body>
 </html>
 

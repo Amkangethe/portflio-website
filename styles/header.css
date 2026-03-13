@@ -1,0 +1,63 @@
+/*global scope*/
+:root {
+  /*HEADER PROPERTIES*/
+  --header-grad-top: rgba(255, 255, 255, 0.88);
+  --header-grad-bot: rgba(247, 243, 235, 0.72);
+  --header-border: rgba(255, 255, 255, 0.30);
+  --header-shadow: rgba(15, 23, 42, 0.18);
+  
+}
+
+html[data-theme="dark"]{
+   /*HEADER PROPERTIES*/
+  /* dark pill (solid colors) */
+  --header-grad-top: rgba(14, 28, 33, 0.90);
+  --header-grad-bot: rgba(14, 28, 33, 0.72);
+  --header-border: rgba(255, 255, 255, 0.10);
+  --header-shadow: rgba(0, 0, 0, 0.0);     /* they don't use an outer shadow */
+  --header-text: rgb(246, 242, 234);
+
+}
+
+.header{
+  display:flex;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+
+  justify-content: space-around;
+  align-items: center;
+
+  /* “spreads to the sides” look: corner lighting + subtle vertical tone */
+  /* glass look */
+  color: var(--header-text);
+
+  background: linear-gradient(180deg, var(--header-grad-top), var(--header-grad-bot));
+  border: 1px solid var(--header-border);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  /* light: outer shadow, dark: inset glow */
+  box-shadow:
+    0 12px 40px -20px var(--header-shadow),
+    var(--header-inset);
+}
+
+.header-logo
+{
+  color: var(--text);
+  font-family: Inter, "Inter Fallback";
+  font-weight: 700;
+  font-size: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.header-logo:hover
+{
+  color: var(--logo-hover);
+
+}

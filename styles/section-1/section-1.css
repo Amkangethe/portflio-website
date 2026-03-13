@@ -1,0 +1,40 @@
+/* FULL-SCREEN SECTION */
+/* It defines the area: “this is the first screen */
+.section-1 {
+  position: relative;       /* makes children absolute position relative to thi */
+  min-height: 100vh;        /* at least one full screen tall */
+  overflow: hidden;         /* clips glows/grid to the section bounds */
+}
+
+/* HERO BACKGROUND LAYER */
+/* the wallpaper (background layer) */
+.section-1-bg {
+  position: absolute;      /* take out of layout */
+  inset: 0;                /* fill the section-1 box */
+  z-index: 0;              /* behind content */
+  pointer-events: none;    /* doesn't block clicks */
+
+  /* the part that draws the glows */
+  background:
+    radial-gradient(950px 680px at 8% 10%, var(--glow-blue), transparent 62%),   /* blue glow */
+    radial-gradient(900px 650px at 90% 18%, var(--glow-warm), transparent 62%),  /* warm glow */
+    radial-gradient(900px 650px at 50% 90%, var(--glow-green), transparent 62%),  /* warm glow */
+    linear-gradient(180deg, var(--glow-base-top), var(--glow-base-bot));         /* base wash (top → bottom) */
+}
+
+/* This part draws the grid overlay (pseudo-element) */
+.section-1-bg::before {
+  content: "";           /* Pseudo-elements don’t show up unless they have */
+  position: absolute;    /* Makes the grid layer cover the entire background area. */
+  inset: 0;              /* Makes the grid layer cover the entire background area. */
+
+  /* Draw two image layers as the background. */
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),  /* Vertical lines */
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px); /* Horizontal lines */
+  
+  /*controls the size of the repeating tile for each background layer.*/
+  background-size: 80px 80px;
+
+}
+
