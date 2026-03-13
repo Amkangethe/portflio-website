@@ -24,12 +24,14 @@
 					<a class="menu-item"></a>
 					<a class="menu-item"></a>
 					<a class="menu-item"></a>
-					<button id="themeToggle">theme</button>
+					<button id="themeToggle">
+						<img id="themeIcon" class="theme" src="./icons/sun.png" alt="" />
+					</button>
 				</div>
 			</div>
 
 			<!-- Profile Card -->
-			<div class="profile-hero">
+			<div class="profile-hero reveal d1">
 				<div class="profile-hero-info">
 					<p class="profile-hero-name">Allan Kangethe</p>
 					<p class="profile-hero-title">Graduate Student</p>
@@ -50,6 +52,16 @@
 
 			</div>
 
+			<div class="external-links reveal d3">
+				<a href="https://github.com/Amkangethe" target="_blank">
+					<img class="profile-icon" src="icons/github.png">
+				</a>
+				<a href="https://www.linkedin.com/in/allankangethe/" target="_blank">
+					<img class="profile-icon" src="icons/linkedin.png">
+				</a>
+
+			</div>
+
 			
 		</section>
 
@@ -59,9 +71,25 @@
 
 		<script>
 			const root = document.documentElement;
-			document.getElementById("themeToggle").onclick = () => {
-				root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+			
+			const btn = document.getElementById("themeToggle");
+			const icon = document.getElementById("themeIcon");
+
+			const ICON_LIGHT = "./icons/sun.png";   // shown when theme is light
+			const ICON_DARK  = "./icons/moon.png";  // shown when theme is dark
+
+			const setIcon = () => {
+				const isDark = root.dataset.theme === "dark";
+				icon.src = isDark ? ICON_DARK : ICON_LIGHT; // click shows opposite action
 			};
+
+			btn.onclick = () => {
+				root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+				setIcon();
+			};
+
+			// set correct icon on initial load (if you set data-theme in HTML/CSS)
+			setIcon();
 		</script>
 		
 </body>

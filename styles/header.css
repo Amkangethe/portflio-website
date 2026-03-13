@@ -16,6 +16,7 @@ html[data-theme="dark"]{
   --header-border: rgba(255, 255, 255, 0.10);
   --header-shadow: rgba(0, 0, 0, 0.0);     /* they don't use an outer shadow */
   --header-text: rgb(246, 242, 234);
+  --dark-icon: invert(100%);
 
 }
 
@@ -49,7 +50,6 @@ html[data-theme="dark"]{
 .header-logo
 {
   color: var(--text);
-  font-family: Inter, "Inter Fallback";
   font-weight: 700;
   font-size: 25px;
   padding: 10px 0;
@@ -60,4 +60,22 @@ html[data-theme="dark"]{
 {
   color: var(--logo-hover);
 
+}
+
+#themeToggle
+{
+   background-color: transparent;
+   border-radius: 10px;
+   padding: 10px 10px;
+   border: none;
+   cursor: pointer;
+
+}
+
+.theme
+{
+  height: 15px;
+  filter: var(--dark-icon)
+
+  
 }

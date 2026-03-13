@@ -34,3 +34,17 @@ body {
   color: var(--text);
 }
 
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* apply to any element you want */
+.reveal {
+  opacity: 0;                      /* start hidden */
+  animation: riseIn 700ms ease forwards;
+}
+
+.reveal.d1 { animation-delay: 80ms; }
+.reveal.d2 { animation-delay: 160ms; }
+.reveal.d3 { animation-delay: 240ms; }
