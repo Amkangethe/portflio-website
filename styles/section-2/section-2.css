@@ -1,14 +1,4 @@
-/* FULL-SCREEN SECTION */
-/* It defines the area: “this is the first screen */
-.section-1 {
-  position: relative;       /* makes children absolute position relative to thi */
-  min-height: 100vh;        /* at least one full screen tall */
-  overflow: hidden;         /* clips glows/grid to the section bounds */
-}
-
-/* HERO BACKGROUND LAYER */
-/* the wallpaper (background layer) */
-.section-1-bg {
+.section-2-bg {
   position: absolute;      /* take out of layout */
   inset: 0;                /* fill the section-1 box */
   z-index: 0;              /* behind content */
@@ -22,8 +12,7 @@
     linear-gradient(180deg, var(--glow-base-top), var(--glow-base-bot));         /* base wash (top → bottom) */
 }
 
-/* This part draws the grid overlay (pseudo-element) */
-.section-1-bg::before {
+.section-2-bg::before {
   content: "";           /* Pseudo-elements don’t show up unless they have */
   position: absolute;    /* Makes the grid layer cover the entire background area. */
   inset: 0;              /* Makes the grid layer cover the entire background area. */
@@ -35,42 +24,5 @@
   
   /*controls the size of the repeating tile for each background layer.*/
   background-size: 80px 80px;
-
-}
-
-@media screen and (max-width: 900px)
-{
-    .profile-hero
-    {
-        margin-top: 90px;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .profile-hero-info
-    {
-        align-items: center;
-        padding: 0 20px;
-    }
-    .profile-hero-name
-    {
-        margin: 0px 0 0 0;
-    }
-    .profile-hero-role
-    {
-        margin-bottom: 20px;
-    }
-    .profile-video
-    {
-        order: -1;
-    }
-    .quick-links
-    {
-        margin-top: 40px;
-    }
-    .external-links
-    {
-        padding-top: 40px;
-    }
 
 }
