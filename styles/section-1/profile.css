@@ -43,7 +43,7 @@ html[data-theme="dark"] {
     align-items: center;
     overflow: hidden;
 
-    margin-top: 210px;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     height: auto;

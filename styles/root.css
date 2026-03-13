@@ -10,6 +10,7 @@
   --glow-base-top: rgba(255,255,255,.92);
   --glow-base-bot: rgba(255,255,255,.55);
   --grid-line: rgba(228, 228, 228, 0.411);
+   --grid-size: 60px;
   
 }
 
@@ -27,12 +28,71 @@ html[data-theme="dark"] {
 
 }
 
-/* APPLY TOKENS */
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
 body {
   margin: 0;
-  background: var(--page-bg);
+   margin-bottom: 1000px;
+  background-color: var(--page-bg);
   color: var(--text);
 }
+
+/*
+  GLOBAL BACKGROUND (glows + base wash)
+  - fixed => stays perfectly continuous across all sections (no seams)
+  - if you want it to scroll with the page instead, tell me and I’ll flip it
+*/
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+
+  background:
+    radial-gradient(950px 680px at 8% 10%, var(--glow-blue), transparent 62%),
+    radial-gradient(900px 650px at 90% 18%, var(--glow-warm), transparent 62%),
+    radial-gradient(900px 650px at 50% 110%, var(--glow-green), transparent 65%),
+    linear-gradient(180deg, var(--glow-base-top), var(--glow-base-bot));
+}
+
+/* GLOBAL GRID */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+/* ---------- SECTION SYSTEM ---------- */
+.section {
+  min-height: 100vh;
+  width: 100%;
+
+  /* critical: don’t paint over the global background */
+  background: transparent;
+
+  /* optional: makes building easy */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 64px 24px;
+}
+
+/* optional: snap scrolling like “pages” */
+body.snap { scroll-snap-type: y mandatory; }
+body.snap > .section { scroll-snap-align: start; }
 
 @keyframes riseIn {
   from { opacity: 0; transform: translateY(16px); }
@@ -48,3 +108,41 @@ body {
 .reveal.d1 { animation-delay: 80ms; }
 .reveal.d2 { animation-delay: 160ms; }
 .reveal.d3 { animation-delay: 240ms; }
+
+
+@media screen and (max-width: 900px)
+{
+    .profile-hero
+    {
+        margin-top: 90px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .profile-hero-info
+    {
+        align-items: center;
+        padding: 0 20px;
+    }
+    .profile-hero-name
+    {
+        margin: 0px 0 0 0;
+    }
+    .profile-hero-role
+    {
+        margin-bottom: 20px;
+    }
+    .profile-video
+    {
+        order: -1;
+    }
+    .quick-links
+    {
+        margin-top: 40px;
+    }
+    .external-links
+    {
+        padding-top: 40px;
+    }
+
+}
