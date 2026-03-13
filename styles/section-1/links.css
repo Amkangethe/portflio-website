@@ -43,7 +43,7 @@ html[data-theme="dark"] {
     text-decoration: none;
     cursor: pointer;
 
-    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+   
     white-space: nowrap;
     box-shadow: var(--quick-links-button-box-shadow);
 }

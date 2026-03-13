@@ -1,0 +1,134 @@
+.profile-description
+{
+    column-gap: 200px;
+    height: auto;
+    align-items: top;
+
+}
+
+.about-me
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description-header
+{
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    width: fit-content;
+    padding: 10px 10px;
+    border: 1px var(--profile-border) solid;
+    border-radius: 20px;
+    box-shadow: var(--quick-links-button-box-shadow);
+    
+
+}
+.about-me-text
+{
+    color: var(--profile-title-text);
+    margin: 0;
+    width: 700px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.details-card
+{
+    display: flex;
+    flex-direction: column;
+    
+    height: 300px;
+    width: 300px;
+    
+    border: 1px var(--profile-border) solid;
+    box-shadow: var(--quick-links-button-box-shadow);
+    border-radius: 20px;
+   
+}
+
+
+
+.description-header
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: var(--profile-text);
+}
+
+.details-header
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin:0;
+    margin-left: 20px ;           /* remove <p> default spacing */
+    
+    justify-content: flex-start; /* left align row */
+    font-size: 20px;
+}
+
+.details-icons
+{
+    height: 20px;
+    filter: var(--external-links);
+}
+
+.detail
+{
+    margin: 10px 0 20px 20px; 
+    color: var(--profile-title-text);
+    font-size: 18px;
+}
+
+.details-divider
+{
+    height: 1px;
+    margin: 0px 20px;      /* aligns with your left padding */
+    border-radius: 999px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--profile-title-text),
+        transparent
+    );
+  
+}
+
+.status{
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 15px;
+}
+
+.status-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: red;              /* dot color */
+  position: relative;
+}
+
+/* pulse ring */
+.status-dot::after{
+  content:"";
+  position:absolute;
+  inset: -5px;                      /* ring size */
+  border-radius: 50%;
+  background: #ff2b2b;
+  opacity: 0.35;
+  animation: pulse 1.4s ease-out infinite;
+}
+
+@keyframes pulse{
+  0%   { transform: scale(0.6); opacity: 0.45; }
+  60%  { transform: scale(1.6); opacity: 0.00; }
+  100% { transform: scale(1.6); opacity: 0.00; }
+}

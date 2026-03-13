@@ -3,12 +3,12 @@
     <head>
 		<title>Allan Kangethe</title>
 		<link rel="stylesheet" href="./styles/root.css">
-		<link rel="stylesheet" href="./styles/main.css">
-
 		<link rel="stylesheet" href="./styles/header.css">
-		<link rel="stylesheet" href="./styles/section-1/section-1.css">
+
+		
 		<link rel="stylesheet" href="./styles/section-1/profile.css">
 		<link rel="stylesheet" href="./styles/section-1/links.css">
+		<link rel="stylesheet" href="./styles/section-1/description.css">
 		
 
 		<link rel="stylesheet" href="./styles/section-2/section-2.css">
@@ -21,8 +21,6 @@
 		<div class="site-bg" aria-hidden="true"></div>
 		<!-- Section 1-->
 		<div id="section-1" class="section section-1">
-			
-			
 			<!-- Header -->
 			<div class="header">
 				<a href="#top" class="header-logo">Allan Kangethe</a>
@@ -56,7 +54,8 @@
 				</div>
 			</div>
 
-			<div class="quick-links">
+			<!-- Projects + Resume  -->
+			<div class="quick-links reveal d3">
 				<a class="quick-links-button" href="https://example.com" target="_blank" rel="noopener">
 					<span class="quick-links-text">View Projects</span>
 					<img class="quick-links-icon-1" src="./icons/code.png" alt="" />
@@ -70,6 +69,7 @@
 
 			</div>
 
+			<!-- External Links -->
 			<div class="external-links reveal d3">
 				<a href="https://github.com/Amkangethe" target="_blank">
 					<img class="profile-icon" src="icons/github.png">
@@ -80,13 +80,35 @@
 
 			</div>
 
-			<div class="profile-description">
+			<!-- Description  -->
+			<div class="profile-description reveal d4">
 				<div class="about-me">
-					<p class="about-me-header">About Me</p>
+					<p class="description-header">About Me</p>
 					<p class="about-me-text">
 					Graduate CS student focused on AI/ML + software engineering—learning by building projects end-to-end, 
 					from data/modeling to application integration, with an emphasis on scalability and maintainability.
 					</p>
+				</div>
+				<div class="details-card ">
+					<p class="description-header">Details</p>
+					<p class="details-header">
+						<img class="details-icons" src="./icons/location.png" alt="" />
+						<span class="details-text">Location</span>
+					</p>
+					<p class="detail">Washington Metropolitan Area</p>
+					<p class="details-header">
+						<img class="details-icons" src="./icons/graduation-cap.png" alt="" />
+						<span class="details-text">Education</span>
+					</p>
+					<p class="detail">Georgia Institute of Technology</p>
+					<div class="details-divider"></div>
+
+					<div class="status">
+						<span class="status-dot" aria-hidden="true"></span>
+						<span class="status-text">Available to Work</span>
+					</div>
+
+
 				</div>
 				
 
@@ -98,7 +120,7 @@
 		</div>
 
 		<div id="section-2" class="section section-2">
-			
+
 		</div>
 
 		
@@ -128,9 +150,10 @@
 			// set correct icon on initial load (if you set data-theme in HTML/CSS)
 			setIcon();
 
+			/*
 			window.addEventListener("DOMContentLoaded", () => {
 			document.getElementById("section-2")?.scrollIntoView({ behavior: "auto" });
-			});
+			});*/
 			
 		</script>
 		

@@ -108,6 +108,7 @@ body.snap > .section { scroll-snap-align: start; }
 .reveal.d1 { animation-delay: 80ms; }
 .reveal.d2 { animation-delay: 160ms; }
 .reveal.d3 { animation-delay: 240ms; }
+.reveal.d4 { animation-delay: 290ms; }
 
 
 @media screen and (max-width: 900px)

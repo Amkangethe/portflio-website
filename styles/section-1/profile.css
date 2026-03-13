@@ -127,7 +127,7 @@ html[data-theme="dark"] {
 
     justify-content: center;
     border-radius: 100px;
-    border: 4px white solid;
+    border: 4px var(--page-bg) solid;
    
     height: 150px;
     width: 150px;
@@ -139,34 +139,6 @@ html[data-theme="dark"] {
     transform: scale(1.82) translateY(28px);
 }
 
-.about-me
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.about-me-header
-{
-    display: flex;
-    position: relative;
-    background-color: transparent;
-    width: fit-content;
-    padding: 10px 10px;
-    border: 1px var(--profile-border) solid;
-    border-radius: 20px;
-    box-shadow: var(--quick-links-button-box-shadow);
-    
-
-}
-.about-me-text
-{
-    color: var(--profile-title-text);
-    margin: 0;
-    width: 700px;
-    font-size: 30px;
-    text-align: center;
-}
 
 
