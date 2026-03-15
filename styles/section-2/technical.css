@@ -1,0 +1,105 @@
+:root{
+    /*PROFILE PROPERTIES*/
+    --technical-chip: rgb(238, 237, 237);   
+} 
+
+html[data-theme="dark"] {
+    /*PROFILE PROPERTIES*/
+    --technical-chip: rgba(24, 30, 32, 0.342);
+}
+
+.technical
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.technical-title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: "Fraunces", "Arial";
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    margin: 0;
+    margin-top: 90px;
+
+    text-decoration: underline var(--profile-title-text);
+    text-underline-offset: 15px;
+
+    border: 1px var(--profile-border) solid;
+    border-radius: 20px;
+    box-shadow: var(--quick-links-button-box-shadow);
+    padding: 20px;
+    width: fit-content;
+}
+.technical-subtitle
+{
+    font-size: 20px;
+    font-family: Arial;
+    color: rgb(115, 115, 115);
+    text-align: center;
+    margin-top: 20px;
+
+    
+}
+
+
+.technical-grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: min(1100px, 92vw);
+  margin: 40px auto 0;
+}
+
+/* each card */
+.tech-card{
+  border: 1px solid var(--profile-border);
+  border-radius: 18px;
+  box-shadow: var(--quick-links-button-box-shadow);
+  padding: 18px;
+  min-height: 160px;
+  background: var(--profile-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+}
+
+.tech-card-title
+{
+    margin: 0 0 12px;
+    font-family: "Fraunces", Arial;
+    font-weight: 700;   /* <-- fix */
+    font-size: 20px;
+}
+
+.tech-card-chips{
+  display: flex;
+  flex-wrap: wrap;     /* <-- wraps to next line */
+  gap: 10px;
+}
+
+.chip{
+  border: 1px solid var(--profile-border);  /* <-- pill border */
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 1;
+  background: var(--technical-chip); /* optional */
+}
+
+
+
+/* tablet/mobile: 1 per row */
+@media (max-width: 900px){
+  .technical-grid-container{
+    grid-template-columns: 1fr;
+  }
+}

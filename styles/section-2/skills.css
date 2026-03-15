@@ -1,0 +1,100 @@
+.section-2{
+  justify-content: flex-start; /* top */
+  align-items: stretch;        /* full width (optional) */
+  padding-top: 0;              /* or whatever */
+}
+
+.skills{
+  position: relative;
+  overflow-x: hidden;   /* keep marquee clipped left/right */
+  overflow-y: visible;  /* allow hovered icon to grow up/down */
+  width: 100%;
+  padding: 26px 0 44px; /* add TOP padding so zoom doesn't clip */
+}
+
+.skills_label{
+  position: absolute;
+  bottom: 10px;
+
+  /* JS will set left in px */
+  left: 0;
+  transform: translateX(-50%);
+
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Cascadia Code';
+  color: var(--text);
+
+  opacity: 0;
+  transition: opacity 150ms ease, transform 150ms ease;
+  pointer-events: none;
+}
+
+.skills_label.show{
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+
+.skills_track{
+  display: flex;
+  width: max-content;
+  animation: skills-marquee 13s linear infinite;
+  will-change: transform;
+  margin-bottom: 5px;  /* creates a clear label zone below icons */
+}
+
+.skills-group{
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-right: 56px;
+}
+
+.skills-icon{
+  height: 42px;
+  width: auto;
+  opacity: 0.55;
+  filter: grayscale(100%);
+  transition: opacity 150ms ease, filter 150ms ease, transform 150ms ease;
+  will-change: transform;
+}
+
+.skills-icon:hover{
+  opacity: 1;
+  filter: none;
+  position: relative;
+  z-index: 5;                         /* sit above adjacent icons */
+  transform: translateY(-2px) scale(1.12);
+}
+
+@keyframes skills-marquee{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* pause on hover */
+.skills:hover .skills_track{
+  animation-play-state: paused ;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .skills_track{ animation: none; }
+}
+
+
+@media screen and (max-width: 900px)
+{
+    
+  .skills-icon
+  {
+  height: 50px;
+  }
+  .skills_track
+  {
+  animation: skills-marquee 20s linear infinite;
+}
+    
+    
+
+}

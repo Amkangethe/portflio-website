@@ -9,23 +9,25 @@
 		<link rel="stylesheet" href="./styles/section-1/profile.css">
 		<link rel="stylesheet" href="./styles/section-1/links.css">
 		<link rel="stylesheet" href="./styles/section-1/description.css">
-		
 
-		<link rel="stylesheet" href="./styles/section-2/section-2.css">
-		
+		<link rel="stylesheet" href="./styles/section-2/skills.css">
+		<link rel="stylesheet" href="./styles/section-2/technical.css">
+
+	
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
+
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
     <body>
 		<div class="site-bg" aria-hidden="true"></div>
-		<!-- Section 1-->
-		<div id="section-1" class="section section-1">
-			<!-- Header -->
+
+		<!-- Header -->
 			<div class="header">
 				<a href="#top" class="header-logo">Allan Kangethe</a>
 				<div class="menu">
-					<a class="menu-item"></a>
+					<a href="#skills" class="menu-item">Skills</a>
 					<a class="menu-item"></a>
 					<a class="menu-item"></a>
 					<a class="menu-item"></a>
@@ -35,6 +37,10 @@
 				</div>
 			</div>
 
+
+		<!-- Section 1-->
+		<div id="section-1" class="section section-1">
+			
 			<!-- Profile Card -->
 			<div class="profile-hero reveal d1">
 				<div class="profile-hero-info">
@@ -120,12 +126,32 @@
 		</div>
 
 		<div id="section-2" class="section section-2">
+			<div class="skills" id="skillsMarquee">
+				<div class="skills_track">
+					<div class="skills-group js-skills-group"></div>
+					<div class="skills-group js-skills-group" aria-hidden="true"></div>
+				</div>
+
+				<div class="skills_label" id="skillsLabel" aria-live="polite"></div>
+			</div>
+
+			<div id="skills" class="technical">
+				<div class="technical-title">Technical Expertise</div>
+				<p class="technical-subtitle">A comprehensive overview of my technical skills and tools.</p>
+				<div class="technical-grid-container js-technical-grid-container"></div>
+			</div>
+
 
 		</div>
 
+		<div id="section-2" class="section section-2"></div>
+
+
+
 		
 
-
+		<script src="./scripts/section-2.js"></script>
+		
 		<script>
 			const root = document.documentElement;
 			
@@ -150,10 +176,9 @@
 			// set correct icon on initial load (if you set data-theme in HTML/CSS)
 			setIcon();
 
-			/*
-			window.addEventListener("DOMContentLoaded", () => {
-			document.getElementById("section-2")?.scrollIntoView({ behavior: "auto" });
-			});*/
+
+			
+
 			
 		</script>
 		

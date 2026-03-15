@@ -62,6 +62,43 @@ html[data-theme="dark"]{
 
 }
 
+/* base link color (kills purple/visited) */
+.menu-item,
+.menu-item:link,
+.menu-item:visited{
+  color: var(--profile-role-text);
+  text-decoration: none;
+}
+
+/* underline animation */
+.menu-item{
+  position: relative;
+  display: inline-block;          /* needed so underline matches text width */
+  transition: color 200ms ease;
+}
+
+.menu-item::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;                   /* like text-underline-offset */
+  height: 2px;
+  background: var(--profile-name-text);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.menu-item:hover{
+  color: var(--text);
+}
+
+.menu-item:hover::after{
+  transform: scaleX(1);
+}
+
 #themeToggle
 {
    background-color: transparent;
