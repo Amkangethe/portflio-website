@@ -50,7 +50,7 @@ document.querySelectorAll(".js-skills-group").forEach((el) => {
 // Technical Section
 skillsSection = [{ "Languages" : ['Python', 'Java', 'C++', 'JavaScript', 'SQL', 'C#']},
                 { "Web Development" : ['HTML', 'CSS', 'React', 'Flask']},
-                { "Web Development" : ['TensorFlow', 'Keras', 'Scikit-Learn', 'Pandas', 'NumPy', 'Matplotlib']},
+                { "AI & ML" : ['Ollama', TensorFlow', 'Keras', 'Scikit-Learn', 'Pandas', 'NumPy', 'Matplotlib']},
                 { "Databases & Tools" : ['MySQL','SQLite', 'MongoDB', 'Git', 'Linux', 'Jira']}
 ];
 
