@@ -104,17 +104,29 @@ html[data-theme="dark"] {
 {
     .technical
     {
-        margin-top: 20px;
+        margin-top: 0px;
     }
     .technical-grid-container{
         grid-template-columns: 1fr;
         justify-items: center;  
+        margin-top: 30px;
         
     }
     .technical-title
     {
         font-size: 35px;
-        margin-top: 80px;
+        margin-top: 30px;
+    }
+    .technical-subtitle
+    {
+        font-size: 18px;
+        width:  330px;
+        font-family: Arial;
+        color: rgb(115, 115, 115);
+        text-align: center;
+        margin-top: 20px;
+
+        
     }
     .tech-card
     {

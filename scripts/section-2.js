@@ -28,8 +28,8 @@ if (wrap && label) {
 
 // --------------------------------------------------------------------------------------
 // Skills Section
-skillsList = ['python', 'java', 'c-', 'c-sharp', 'html', 'css', 'js', 
-    'git', 'database', 'linux', 'jira', 'python', 'java', 'c-', 'c-sharp', 'html', 'css', 'js', 
+skillsList = ['python', 'java', 'c++', 'c-sharp', 'html', 'css', 'js', 
+    'git', 'database', 'linux', 'jira', 'python', 'java', 'c++', 'c-sharp', 'html', 'css', 'js', 
     'git', 'database', 'linux', 'jira'
 ];
 
