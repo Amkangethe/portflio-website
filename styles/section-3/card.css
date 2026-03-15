@@ -134,24 +134,3 @@ html[data-theme="dark"]{
 }
 
 
-
-
-/*
- cardHTML +=`
-    <div class="card">
-        <p class="card-date">${details[0]}</p>
-        <p class="card-title">${details[1]}</p>
-        <p class="card-school">
-            ${details[3]}
-            <img class="D" src="${details[2]}" />
-            
-        </p>
-        <div class="card-tags">`;
-        
-        details[4].forEach((tag) =>{
-            cardHTML +=`<span class="tag">${tag}</span>`
-
-        });
-        cardHTML += `
-        </div>
-    </div>` */
