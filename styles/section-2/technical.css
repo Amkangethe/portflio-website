@@ -15,6 +15,7 @@ html[data-theme="dark"] {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    margin: 0;
 }
 
 .technical-title
@@ -28,7 +29,7 @@ html[data-theme="dark"] {
     color: var(--text);
     text-align: center;
     margin: 0;
-    margin-top: 90px;
+    margin-top: 100px;
 
     text-decoration: underline var(--profile-title-text);
     text-underline-offset: 15px;
@@ -52,11 +53,12 @@ html[data-theme="dark"] {
 
 
 .technical-grid-container{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  width: min(1100px, 92vw);
-  margin: 40px auto 0;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: min(1100px, 92vw);
+    
 }
 
 /* each card */
@@ -98,8 +100,24 @@ html[data-theme="dark"] {
 
 
 /* tablet/mobile: 1 per row */
-@media (max-width: 900px){
-  .technical-grid-container{
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 900px)
+{
+    .technical
+    {
+        margin-top: 20px;
+    }
+    .technical-grid-container{
+        grid-template-columns: 1fr;
+        justify-items: center;  
+        
+    }
+    .technical-title
+    {
+        font-size: 35px;
+        margin-top: 80px;
+    }
+    .tech-card
+    {
+    width: min(520px, 92vw);        /* prevents full-width cards */
+    }
 }

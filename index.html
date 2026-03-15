@@ -27,7 +27,8 @@
 			<div class="header">
 				<a href="#top" class="header-logo">Allan Kangethe</a>
 				<div class="menu">
-					<a href="#skills" class="menu-item">Skills</a>
+					<a href="#top" class="menu-item">About</a>
+					<a href="#section-2" class="menu-item">Skills</a>
 					<a class="menu-item"></a>
 					<a class="menu-item"></a>
 					<a class="menu-item"></a>
@@ -149,34 +150,11 @@
 
 
 		
-
+		<script src="./scripts/section-1.js"></script>
 		<script src="./scripts/section-2.js"></script>
 		
 		<script>
-			const root = document.documentElement;
 			
-			
-			const icon = document.getElementById("themeIcon");
-
-			const ICON_LIGHT = "./icons/sun.png";   // shown when theme is light
-			const ICON_DARK  = "./icons/moon.png";  // shown when theme is dark
-
-			const setIcon = () => {
-				const isDark = root.dataset.theme === "dark";
-				icon.src = isDark ? ICON_DARK : ICON_LIGHT; // click shows opposite action
-			};
-
-			const btn = document.getElementById("themeToggle");
-
-			btn.onclick = () => {
-				root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-				setIcon();
-			};
-
-			// set correct icon on initial load (if you set data-theme in HTML/CSS)
-			setIcon();
-
-
 			
 
 			

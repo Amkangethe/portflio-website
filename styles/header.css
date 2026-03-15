@@ -75,6 +75,7 @@ html[data-theme="dark"]{
   position: relative;
   display: inline-block;          /* needed so underline matches text width */
   transition: color 200ms ease;
+  margin-left: 10px;
 }
 
 .menu-item::after{

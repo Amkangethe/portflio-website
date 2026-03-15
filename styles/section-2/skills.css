@@ -4,6 +4,12 @@
   padding-top: 0;              /* or whatever */
 }
 
+#section-2
+{
+  scroll-margin-top: -70px; /* or header height + 20 */
+  
+}
+
 .skills{
   position: relative;
   overflow-x: hidden;   /* keep marquee clipped left/right */
@@ -52,7 +58,7 @@
 }
 
 .skills-icon{
-  height: 42px;
+  height: 70px;
   width: auto;
   opacity: 0.55;
   filter: grayscale(100%);
