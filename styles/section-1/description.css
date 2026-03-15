@@ -25,6 +25,7 @@
     border: 1px var(--profile-border) solid;
     border-radius: 20px;
     box-shadow: var(--quick-links-button-box-shadow);
+    background-color: var(--tech-bg);
     
 
 }

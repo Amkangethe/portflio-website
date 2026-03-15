@@ -90,6 +90,12 @@ body::after {
   padding: 64px 24px;
 }
 
+.section-3{
+  position: relative;        /* <-- makes .timeline absolute relative to section 3 */
+  justify-content: flex-start; /* optional: don’t center the line vertically */
+  padding-bottom: 3000px;
+}
+
 /* optional: snap scrolling like “pages” */
 body.snap { scroll-snap-type: y mandatory; }
 body.snap > .section { scroll-snap-align: start; }

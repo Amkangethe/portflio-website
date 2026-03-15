@@ -100,6 +100,16 @@ html[data-theme="dark"]{
   transform: scaleX(1);
 }
 
+/* active underline (stays on after click) */
+.menu-item.is-active{
+  color: var(--text);
+}
+
+.menu-item.is-active::after{
+  transform: scaleX(1);
+}
+
+
 #themeToggle
 {
    background-color: transparent;
