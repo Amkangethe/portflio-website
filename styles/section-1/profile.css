@@ -49,6 +49,7 @@ html[data-theme="dark"] {
     height: auto;
     width: fit-content; 
     gap: 20px;
+    padding: 50px 0;
  
     border-radius: 20px;
     box-shadow: var(--profile-box-shadow);
@@ -146,6 +147,7 @@ html[data-theme="dark"] {
         margin-top: 40px;
         flex-direction: column;
         gap: 0;
+        padding: 20px 0;
     }
 
     .profile-hero-info
