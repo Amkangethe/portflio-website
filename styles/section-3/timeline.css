@@ -1,72 +1,127 @@
-.timeline
-{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}.experience-title
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    font-family: "Fraunces", "Arial";
-    font-weight: 700;
-    color: var(--text);
-    text-align: center;
-    margin: 0;
-    margin-top: 100px;
-
-    text-decoration: underline var(--profile-title-text);
-    text-underline-offset: 15px;
-
-    border: 1px var(--profile-border) solid;
-    border-radius: 20px;
-    box-shadow: var(--quick-links-button-box-shadow);
-    padding: 20px;
-    width: fit-content;
-    cursor: default;
-}
-.experience-subtitle
-{
-    font-size: 20px;
-    font-family: Arial;
-    color: rgb(115, 115, 115);
-    text-align: center;
-    margin-top: 20px;
-    cursor: default;
-
-    
+.timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.experience-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: "Fraunces", "Arial";
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin: 0;
+  margin-top: 100px;
 
-.timeline-line{
+  text-decoration: underline var(--profile-title-text);
+  text-underline-offset: 15px;
+
+  border: 1px var(--profile-border) solid;
+  border-radius: 20px;
+  box-shadow: var(--quick-links-button-box-shadow);
+  padding: 20px;
+  width: fit-content;
+  cursor: default;
+}
+
+.experience-subtitle {
+  font-size: 20px;
+  font-family: Arial;
+  color: rgb(115, 115, 115);
+  text-align: center;
+  margin-top: 20px;
+  cursor: default;
+}
+
+.timeline-container {
+  position: relative;
+  width: min(1100px, 94vw);
+  margin-top: 70px;
+  
+}
+
+/* center vertical line */
+.timeline-container::before {
+  content: "";
   position: absolute;
-  top: 432px;
+  top: 0;
   bottom: 0;
-
   left: 50%;
   width: 2px;
   transform: translateX(-50%);
-
-  background: var(--text);  /* solid line, theme-aware */
+  background: var(--text);
   pointer-events: none;
 }
 
-.timeline-container
-{
-    margin-top: 100px;
-    display: flex;
-    width: auto;
-    height: auto;
-    justify-content: center;
-    
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.education, .experience
-{
-    display: flex;
-    flex-direction: column;
-    
+.timeline-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  min-height: 80px;
 }
 
+.timeline-item--left {
+  justify-content: flex-start;
+  padding-right: calc(50% + 40px);
+}
+
+.timeline-item--right {
+  justify-content: flex-end;
+  padding-left: calc(50% + 40px);
+}
+
+
+.timeline-item--left::after {
+  transform: translateX(calc(-50% - 23px));
+}
+
+.timeline-item--right::after {
+  transform: translateX(calc(-50% + 23px));
+}
+
+/* Mobile: single-column timeline like your red reference */
+@media (max-width: 700px) {
+  /* move the vertical line to the left */
+  .timeline-container::before {
+    left: 22px;
+    transform: none;
+  }
+
+  /* stop left/right layout; make all items behave the same */
+  .timeline-item,
+  .timeline-item--left,
+  .timeline-item--right {
+    justify-content: flex-start;
+    padding-left: 54px;
+    padding-right: 0;
+  }
+
+  /* dot aligned to the left vertical line */
+  .timeline-item .dot {
+    left: 16px;
+    transform: none;
+  }
+
+  /* connector from dot to card (short line to the right) */
+  .timeline-item::after {
+    left: 22px;
+    transform: none;
+    width: 32px;
+  }
+
+  /* let cards fill the remaining width */
+  .timeline-item .card {
+    width: 100%;
+    max-width: none;
+  }
+}

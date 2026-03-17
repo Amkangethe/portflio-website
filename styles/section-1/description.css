@@ -11,6 +11,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+     border: 1px var(--profile-border) solid;
+    box-shadow: var(--quick-links-button-box-shadow);
+    border-radius: 20px;
+
+    padding: 0px 10px;
 }
 
 .description-header
@@ -26,16 +32,21 @@
     border-radius: 20px;
     box-shadow: var(--quick-links-button-box-shadow);
     background-color: var(--tech-bg);
+    margin: 10px;
     
 
 }
 .about-me-text
 {
     color: var(--profile-title-text);
-    margin: 0;
+    padding: 10px 0;
     width: 700px;
     font-size: 30px;
     text-align: center;
+    margin: 0;
+    padding-top: 0px;
+
+    
 }
 
 .details-card
@@ -69,7 +80,7 @@
     align-items: center;
     gap: 8px;
 
-    margin:0;
+    margin: 0;
     margin-left: 20px ;           /* remove <p> default spacing */
     
     justify-content: flex-start; /* left align row */

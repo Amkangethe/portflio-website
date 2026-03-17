@@ -1,136 +1,110 @@
 /*global scope*/
 :root {
-  /*CARD PROPERTIES*/
-  --card-date: rgb(100, 150, 175); 
+  --card-date: rgb(100, 150, 175);
   --card-school: rgb(79, 92, 100);
   --card-hover: 1px rgb(0, 0, 0) solid;
-  --card-bg: rgba(255, 255, 255, 0.363);  
+  --card-bg: rgba(255, 255, 255, 0.363);
   --dot-border: white;
-  
 }
 
-html[data-theme="dark"]{
-   /*CARD PROPERTIES*/
-  --card-school:  rgb(201, 191, 177);
-  --card-bg: rgba(42, 52, 56, 0.534);  
+html[data-theme="dark"] {
+  --card-school: rgb(201, 191, 177);
+  --card-bg: rgba(42, 52, 56, 0.534);
   --card-hover: 1px white solid;
   --dot-border: black;
-  
-
 }
 
-.dot
-{
-    position: absolute;
-    left: 50%;
-    
-    transform: translate(-50%, -30px);
-    background-color:var(--card-date);
-    width: 15px;
-    height: 15px;
-    border-radius: 999px;
-    border: 4px var(--dot-border) solid; 
-    box-shadow: 0px 0px 8px var(--card-date);
-
-    transition: height .25s, width .25s;
+.dot {
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  transform: translateX(-50%);
+  background-color: var(--card-date);
+  width: 15px;
+  height: 15px;
+  border-radius: 999px;
+  border: 4px var(--dot-border) solid;
+  box-shadow: 0px 0px 8px var(--card-date);
+  transition: height 0.25s, width 0.25s;
+  z-index: 2;
 }
 
-
-.card
-{
-    display: flex;
-    border: 1px var(--profile-border) solid;
-    flex-direction: row;
-    justify-content: start;
-    height: auto;
-    width: 450px;
-    padding: 30px;
-    border-radius: 20px;
-    margin: 0 0 40px 50px;
-
-    
-    box-shadow: var(--quick-links-button-box-shadow);  
-    background: var(--card-bg);
-    transition: border .25s;
-    cursor: default;
+.card {
+  display: flex;
+  border: 1px var(--profile-border) solid;
+  flex-direction: row;
+  justify-content: start;
+  height: auto;
+  width: 450px;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 0; /* important: timeline controls spacing */
+  box-shadow: var(--quick-links-button-box-shadow);
+  background: var(--card-bg);
+  transition: border 0.25s;
+  cursor: default;
 }
 
-.card:hover
-{
-    border: 1px var(--card-date) solid;
-
+.card:hover {
+  border: 1px var(--card-date) solid;
 }
 
-.card:hover  .dot
-{
-    width: 17px;
-    height: 17px;
-
+.timeline-item:has(.card:hover) .dot {
+  width: 17px;
+  height: 17px;
 }
 
-.card-icon
-{
-    display: block;
-    margin-left: auto;
-    height: 90px;
-    cursor: pointer;
+.card-icon {
+  display: block;
+  margin-left: auto;
+  height: 90px;
+  cursor: pointer;
 }
 
-.card-date
-{
-    font-family:  'Space Mono', monospace;
-    color: var(--card-date);
-    font-size: 14px;
-    margin:0;
+.card-date {
+  font-family: "Space Mono", monospace;
+  color: var(--card-date);
+  font-size: 14px;
+  margin: 0;
 }
 
-.card-title
-{
-    color: var(--text);
-    font-family: sans-serif;
-    font-weight: 700;
-    font-size:23px;
-    margin:0;
-    margin-top: 5px;
+.card-title {
+  color: var(--text);
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  margin: 0;
+  margin-top: 5px;
 }
 
-.card-school
-{
-    font-family: sans-serif;
-    font-weight: 700;
-    color: var(--card-date);
-    font-size: 14px;
-    margin:0;
-    margin-top: 5px;
-    color: var(--card-school);
-
-}
-.card-tags
-{
-    display: flex;
-    flex-wrap: wrap;   /* key */
-    gap: 1px;
-    margin-top: 1px;  /* optional spacing */
-}
-.tag
-{
-    display: inline-flex;          /* key: border hugs content */
-    align-items: center;
-
-    padding: 4px 10px;
-    border-radius: 8px;
-
-    background: rgba(80, 160, 180, 0.10);       /* optional subtle fill */
-
-    line-height: 1;
-    white-space: nowrap;
-    font-family: sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--card-date);
-
-    border: 1px var(--card-date) solid;
-    margin: 10px;
+.card-school {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 5px;
+  color: var(--card-school);
 }
 
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-top: 1px;
+}
 
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: rgba(80, 160, 180, 0.10);
+  line-height: 1;
+  white-space: nowrap;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--card-date);
+  border: 1px var(--card-date) solid;
+  margin: 10px;
+}
