@@ -28,9 +28,9 @@ if (wrap && label) {
 
 // --------------------------------------------------------------------------------------
 // Skills Section
-skillsList = ['python', 'java', 'c++', 'c-sharp', 'html', 'css', 'js', 
-    'git', 'database', 'linux', 'jira', 'python', 'java', 'c++', 'c-sharp', 'html', 'css', 'js', 
-    'git', 'database', 'linux', 'jira'
+skillsList = ['ollama', 'python', 'java', 'c++', 'c-sharp', 'html', 'css', 'js',  
+    'linux', 'git', 'database',  'jira', 'ollama', 'python', 'java', 'c++', 'c-sharp', 'html', 'css', 'js',  
+    'linux', 'git', 'database',  'jira'
 ];
 
 let skillsHTML = '';
