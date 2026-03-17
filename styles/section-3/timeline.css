@@ -93,7 +93,7 @@
 @media (max-width: 700px) {
   /* move the vertical line to the left */
   .timeline-container::before {
-    left: 22px;
+    left: 14px;
     transform: none;
   }
 
@@ -102,13 +102,13 @@
   .timeline-item--left,
   .timeline-item--right {
     justify-content: flex-start;
-    padding-left: 54px;
-    padding-right: 0;
+    padding-left: 45px;
+    padding-right: 10px;
   }
 
   /* dot aligned to the left vertical line */
   .timeline-item .dot {
-    left: 16px;
+    left: 8px;
     transform: none;
   }
 

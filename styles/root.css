@@ -4,13 +4,24 @@
   /*WHOLE PAGE*/
   --page-bg: #f7f6f3;        /*background color for the whole page.*/
   --text: #0f172a;           /*default text color.*/
-  --glow-blue: rgba(139, 221, 228, 0.486);
-  --glow-warm: rgba(245, 179, 112, 0.397);
-  --glow-green: rgba(75, 228, 167, 0.377);
+
   --glow-base-top: rgba(255,255,255,.92);
   --glow-base-bot: rgba(255,255,255,.55);
   --grid-line: rgba(228, 228, 228, 0.411);
-   --grid-size: 60px;
+  --grid-size: 60px;
+
+  /* Section 1 */
+  --g1-x: 80px;   --g1-y: 120px;   --g1-size-x: 950px; --g1-size-y: 680px; --g1-color: var(--glow-blue);
+  --g2-x: 1800px;  --g2-y: 120px;   --g2-size-x: 1200px; --g2-size-y: 650px; --g2-color: var(--glow-warm);
+  --g3-x: 1000px;  --g3-y: 800px;  --g3-size-x: 900px; --g3-size-y: 650px; --g3-color: var(--glow-green);
+
+  /* Section 2 */
+  --g4-x: 900px;   --g4-y: 1200px;   --g4-size-x: 950px; --g4-size-y: 680px; --g4-color: var(--glow-purple);
+
+   /* Section 3 */
+  --g5-x: 1250px;  --g5-y: 2500px;   --g5-size-x: 500px; --g5-size-y: 250px; --g5-color: var(--glow-tech-gold);
+  --g6-x: 1250px;  --g6-y: 3100px;  --g6-size-x: 500px; --g6-size-y: 350px; --g6-color: var(--glow-red);
+  --g7-x: 1250px;  --g7-y: 3420px;  --g7-size-x: 400px; --g7-size-y: 250px; --g7-color: var(--glow-purple-2);
   
 }
 
@@ -21,29 +32,33 @@ html[data-theme="dark"] {
   --glow-blue: rgba(139, 221, 228, 0.205); /* */
   --glow-warm: rgba(245, 179, 112,  0.205);
   --glow-green: rgba(2, 94, 57, 0.205);
+
+  --glow-purple: rgba(143, 94, 148, 0.123);
+  --glow-tech-gold: rgba(179, 163, 105, 0.151); 
+  --glow-red: rgba(172, 0, 0, 0.247); 
+  --glow-purple-2: rgba(226, 170, 217, 0.199); 
+
+
   --glow-base-top: rgba(255,255,255,.06);
   --glow-base-bot: rgba(255,255,255,.02);
   --grid-line: rgba(255, 255, 255, 0.034);
 
-  /*
-   --glow-blue: rgba(139, 221, 228, 0.205); 
-  --glow-warm: rgba(245, 179, 112,  0.205);
-  --glow-green: rgba(2, 94, 57, 0.205);
-  --glow-base-top: rgba(255,255,255,.06);
-  --glow-base-bot: rgba(255,255,255,.02);
-  
-  */
+
 
 
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; scroll-behavior: smooth; }
 
-html, body { height: 100%; scroll-behavior: smooth;}
+html, body {  min-height: 100%;}
 
 body {
+  height: auto;            /* key: allow body to grow with content */
+  min-height: 100vh;       /* at least a viewport */
+  position: relative;      /* anchor for body::before absolute */
+  
+  position: relative;
   margin: 0;
-   margin-bottom: 1000px;
   background-color: var(--page-bg);
   color: var(--text);
 }
@@ -55,15 +70,30 @@ body {
 */
 body::before {
   content: "";
-  position: fixed;
+  position: absolute; /* was: fixed */
   inset: 0;
+  height: 100%;
   z-index: -2;
   pointer-events: none;
 
   background:
-    radial-gradient(950px 680px at 8% 10%, var(--glow-blue), transparent 62%),
-    radial-gradient(900px 650px at 90% 18%, var(--glow-warm), transparent 62%),
-    radial-gradient(900px 650px at 50% 110%, var(--glow-green), transparent 65%),
+    /* Section 1 */
+    radial-gradient(var(--g1-size-x) var(--g1-size-y) at var(--g1-x) var(--g1-y), var(--g1-color), transparent 62%),
+    radial-gradient(var(--g2-size-x) var(--g2-size-y) at var(--g2-x) var(--g2-y), var(--g2-color), transparent 62%),
+    radial-gradient(var(--g3-size-x) var(--g3-size-y) at var(--g3-x) var(--g3-y), var(--g3-color), transparent 65%),
+
+    /* Section 2 */
+    radial-gradient(var(--g4-size-x) var(--g4-size-y) at var(--g4-x) var(--g4-y), var(--g4-color), transparent 62%),
+    
+    /* Section 3 */
+    radial-gradient(var(--g5-size-x) var(--g5-size-y) at var(--g5-x) var(--g5-y), var(--g5-color), transparent 50%),
+    radial-gradient(var(--g6-size-x) var(--g6-size-y) at var(--g6-x) var(--g6-y), var(--g6-color), transparent 50%),
+    radial-gradient(var(--g7-size-x) var(--g7-size-y) at var(--g7-x) var(--g7-y), var(--g7-color), transparent 50%),
+    
+    
+    
+
+    
     linear-gradient(180deg, var(--glow-base-top), var(--glow-base-bot));
 }
 
@@ -102,6 +132,7 @@ body::after {
 .section-3{
   position: relative;        /* <-- makes .timeline absolute relative to section 3 */
   justify-content: flex-start; /* optional: don’t center the line vertically */
+  overflow: visible;
 }
 
 /* optional: snap scrolling like “pages” */
