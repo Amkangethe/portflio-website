@@ -9,9 +9,10 @@
   --glow-warm: rgba(245, 179, 112, 0.397);
   --glow-green: rgba(114, 240, 189, 0.192);
 
-  --glow-purple: rgba(179, 70, 223, 0.103); 
-  
-  --glow-tech-gold: rgba(179, 163, 105, 0); 
+  --glow-purple: rgba(111, 48, 117, 0.192); 
+  --glow-tech-gold: rgba(179, 163, 105, 0.39); 
+
+
   --glow-red: rgba(255, 255, 255, 0);
   --glow-purple-2: rgba(255, 255, 255, 0);
 
@@ -28,12 +29,13 @@
   --g3-x: 1000px;  --g3-y: 800px;  --g3-size-x: 900px; --g3-size-y: 650px; --g3-color: var(--glow-green);
 
   /* Section 2 */
-  --g4-x: 930px;   --g4-y: 1510px;   --g4-size-x: 1200px; --g4-size-y: 650px; --g4-color: var(--glow-purple);
+  --g4-x: 950px;   --g4-y: 1400px;   --g4-size-x: 450px; --g4-size-y: 180px; --g4-color: var(--glow-purple);
 
    /* Section 3 */
   --g5-x: 1250px;  --g5-y: 2500px;   --g5-size-x: 500px; --g5-size-y: 250px; --g5-color: var(--glow-tech-gold);
   --g6-x: 1250px;  --g6-y: 3100px;  --g6-size-x: 500px; --g6-size-y: 350px; --g6-color: var(--glow-red);
   --g7-x: 1250px;  --g7-y: 3420px;  --g7-size-x: 400px; --g7-size-y: 250px; --g7-color: var(--glow-purple-2);
+
 
   
 }
@@ -51,10 +53,9 @@ html[data-theme="dark"] {
   --glow-warm: rgba(245, 179, 112,  0.205);
   --glow-green: rgba(2, 94, 57, 0.205);
 
-  --glow-purple: rgba(225, 137, 235, 0.11);
-
+  --glow-purple: rgba(143, 94, 148, 0.26);
   --glow-tech-gold: rgba(179, 163, 105, 0.151); 
-  --glow-red: rgba(172, 0, 0, 0.233); 
+  --glow-red: rgb(172, 0, 0); 
   --glow-purple-2: rgba(226, 170, 217, 0.199); 
 
 
@@ -64,9 +65,10 @@ html[data-theme="dark"] {
 
 
 
+
 }
 
-* { box-sizing: border-box; scroll-behavior: smooth; }
+
 
 html, body {  min-height: 100%;}
 
@@ -75,7 +77,7 @@ body {
   min-height: 100vh;       /* at least a viewport */
   position: relative;      /* anchor for body::before absolute */
   
-
+  position: relative;
   margin: 0;
   background-color: var(--page-bg);
   color: var(--text);
@@ -102,7 +104,7 @@ body::before {
     radial-gradient(var(--g3-size-x) var(--g3-size-y) at var(--g3-x) var(--g3-y), var(--g3-color), transparent 65%),
 
     /* Section 2 */
-    radial-gradient(var(--g4-size-x) var(--g4-size-y) at var(--g4-x) var(--g4-y), var(--g4-color), transparent 90%),
+    radial-gradient(var(--g4-size-x) var(--g4-size-y) at var(--g4-x) var(--g4-y), var(--g4-color), transparent 62%),
     
     /* Section 3 */
     radial-gradient(var(--g5-size-x) var(--g5-size-y) at var(--g5-x) var(--g5-y), var(--g5-color), transparent 50%),
@@ -169,22 +171,5 @@ body.snap > .section { scroll-snap-align: start; }
 .reveal.d3 { animation-delay: 240ms; }
 .reveal.d4 { animation-delay: 290ms; }
 
-@media (max-width: 900px) {
 
-:root{
-  /* Section 1 */
-  --g1-x: 50%;   --g1-y: 120px;   --g1-size-x: 950px; --g1-size-y: 680px; --g1-color: var(--glow-blue);
-  --g2-x: 50%;  --g2-y: 350px;   --g2-size-x: 800px; --g2-size-y: 600px; --g2-color: var(--glow-warm);
-  --g3-x: 50%;  --g3-y: 940px;  --g3-size-x: 900px; --g3-size-y: 500px; --g3-color: var(--glow-green);
 
-  /* Section 2 */
-  --g4-x: 50%;   --g4-y: 2000px;   --g4-size-x: 900px; --g4-size-y: 500px; --g4-color: rgba(255, 255, 255, 0);
-
-   /* Section 3 */
-  --g5-x: 55%;  --g5-y: 2900px;   --g5-size-x: 350px; --g5-size-y: 250px; --g5-color: rgba(255, 255, 255, 0);
-  --g6-x: 1250px;  --g6-y: 3100px;  --g6-size-x: 500px; --g6-size-y: 350px; --g6-color: rgba(255, 255, 255, 0);
-  --g7-x: 1250px;  --g7-y: 3420px;  --g7-size-x: 400px; --g7-size-y: 250px; --g7-color: rgba(255, 255, 255, 0);
-  
-}
-
-}

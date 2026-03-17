@@ -90,7 +90,13 @@
 }
 
 /* Mobile: single-column timeline like your red reference */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+
+    
+    .experience-title {
+        margin-top: 20px;
+
+    }
   /* move the vertical line to the left */
   .timeline-container::before {
     left: 14px;
