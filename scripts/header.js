@@ -63,28 +63,37 @@ document.querySelector(".js-header").innerHTML = headerHTML;
 // Menu Button Drop down
 const button = document.getElementById("menuToggle");
 const menu = document.getElementById("drop-menu");
-button.addEventListener("click", () =>
+
+if (button && menu)
 {
-    menu.classList.toggle("show");
-});
+    button.addEventListener("click", () =>
+    {
+        menu.classList.toggle("show");
+    });
+}
 
 const menuItems = document.querySelectorAll(".js-menu-item");
-menuItems.forEach((item) =>
+
+if (menu)
 {
-    item.addEventListener("click", () =>
+    menuItems.forEach((item) =>
+    {
+        item.addEventListener("click", () =>
+        {
+            menu.classList.remove("show");
+        });
+    });
+}
+
+const menu_back_button = document.getElementById("menuBackButton");
+
+if (menu_back_button && menu)
+{
+    menu_back_button.addEventListener("click", () =>
     {
         menu.classList.remove("show");
     });
-});
-
-const menu_back_button = document.getElementById("menuBackButton");
-menu_back_button.addEventListener("click", () => 
-{
-    menu.classList.toggle("show");
-
-});
-
-
+}
 
 // --------------------------------------------------------------------------------------
 // Toggle Dark and Light Theme

@@ -29,6 +29,7 @@ html[data-theme="dark"]{
   height: auto;
 
   justify-content: space-around;
+  align-items: baseline;
   
 
   /* “spreads to the sides” look: corner lighting + subtle vertical tone */
@@ -77,6 +78,7 @@ html[data-theme="dark"]{
   display: inline-block;          /* needed so underline matches text width */
   transition: color 200ms ease;
   margin-left: 10px;
+  color: var(--text);
 }
 
 .menu-item::after{
@@ -87,6 +89,7 @@ html[data-theme="dark"]{
   bottom: -5px;                   /* like text-underline-offset */
   height: 2px;
   background: var(--profile-name-text);
+  color: var(--text);
 
   transform: scaleX(0);
   transform-origin: left;
@@ -123,20 +126,21 @@ html[data-theme="dark"]{
    padding: 10px 10px;
    border: none;
    cursor: pointer;
+   color: var(--text);
 
 }
 
 .theme
 {
   height: 15px;
-  filter: var(--dark-icon)
+  filter: var(--dark-icon);
 
 }
 
 .menu
 {
   height: 15px;
-  filter: var(--dark-icon)
+  
 
 }
 
@@ -176,6 +180,7 @@ html[data-theme="dark"]{
     transition: opacity 0s ease, transform 1s ease, visibility 0s ease;
     width: 0px;
     height: 0px;
+    
 }
 
 .drop-menu-back-button
@@ -221,10 +226,20 @@ html[data-theme="dark"]{
 
 @media (max-width: 900px)
 {
+  .header
+  {
+    align-items:center;
+  }
   .menu-item
   {
     margin-left: 0px;
     color: var(--text);
   }
-  
+  .menu
+  {
+    height: 15px;
+    filter: var(--dark-icon);
+    
+
+  }
 }
