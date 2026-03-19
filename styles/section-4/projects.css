@@ -2,16 +2,16 @@
 
 :root{
     /*PROFILE PROPERTIES*/
-    --project-button: rgb(238, 237, 237);
+    --project-button: rgb(192, 192, 192);
     --project-button-border: rgb(143, 143, 143);
-    --project-button-hover: rgb(196, 196, 196);
+    --project-button-hover: rgb(129, 206, 245); 
 
 } 
 
 html[data-theme="dark"] {
     --project-button: rgb(27, 33, 36); 
     --project-button-border: rgb(74, 90, 97);
-    --project-button-hover: rgb(15, 19, 20); 
+    
 }
 
 
@@ -74,6 +74,7 @@ html[data-theme="dark"] {
     display: flex;
     flex-direction: column;
     height: auto;
+    min-height: 400px;
     width:450px;
     border-radius: 18px;
     box-shadow: var(--quick-links-button-box-shadow);
@@ -95,8 +96,9 @@ html[data-theme="dark"] {
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
-    min-height: 250px;
-    
+    height: 250px;
+    overflow: hidden;
+    position: relative;
 }
 
 .project-card-thumnail-img
@@ -107,6 +109,7 @@ html[data-theme="dark"] {
     background-repeat: no-repeat;
     background-position: center;
     transition: background-size 1s, height 1s;
+    object-fit: contain;
 }
 
 .project-card:hover .project-card-thumnail-img
@@ -203,4 +206,22 @@ html[data-theme="dark"] {
     align-items: center;
     line-height: 1;
     margin: 0;
+}
+
+@media (max-width: 900px)
+{
+    .project-card
+    {
+        width: 300px;
+    }
+
+    .projects-container
+    {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    }
+
+
+
+
 }
