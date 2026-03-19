@@ -153,6 +153,11 @@ body::after {
   overflow: visible;
 }
 
+.section-4
+{
+  margin-bottom: 10px;
+}
+
 /* optional: snap scrolling like “pages” */
 body.snap { scroll-snap-type: y mandatory; }
 body.snap > .section { scroll-snap-align: start; }

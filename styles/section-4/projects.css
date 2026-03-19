@@ -215,6 +215,12 @@ html[data-theme="dark"] {
         width: 300px;
     }
 
+    .projects
+    {
+        margin-top: 15px;
+        
+    }
+
     .projects-container
     {
         grid-template-columns: repeat(1, minmax(0, 1fr));
