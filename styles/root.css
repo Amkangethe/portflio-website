@@ -14,6 +14,7 @@
   --glow-tech-gold: rgba(179, 163, 105, 0); 
   --glow-red: rgba(255, 255, 255, 0);
   --glow-purple-2: rgba(255, 255, 255, 0);
+  --glow-blue-2: rgba(255, 255, 255, 0);
 
 
 
@@ -31,9 +32,10 @@
   --g4-x: 930px;   --g4-y: 1510px;   --g4-size-x: 1200px; --g4-size-y: 650px; --g4-color: var(--glow-purple);
 
    /* Section 3 */
-  --g5-x: 1250px;  --g5-y: 2500px;   --g5-size-x: 500px; --g5-size-y: 250px; --g5-color: var(--glow-tech-gold);
-  --g6-x: 1250px;  --g6-y: 3100px;  --g6-size-x: 500px; --g6-size-y: 350px; --g6-color: var(--glow-red);
-  --g7-x: 1250px;  --g7-y: 3420px;  --g7-size-x: 400px; --g7-size-y: 250px; --g7-color: var(--glow-purple-2);
+  --g5-x: 1250px;  --g5-y: 2450px;   --g5-size-x: 500px; --g5-size-y: 250px; --g5-color: var(--glow-tech-gold);
+  --g6-x: 1250px;  --g6-y: 3050px;  --g6-size-x: 500px; --g6-size-y: 350px; --g6-color: var(--glow-red);
+  --g7-x: 1250px;  --g7-y: 3375px;  --g7-size-x: 400px; --g7-size-y: 250px; --g7-color: var(--glow-purple-2);
+  --g8-x: 600px;  --g8-y: 2720px;  --g8-size-x: 400px; --g8-size-y: 250px; --g8-color: var(--glow-blue-2);
 
   
 }
@@ -56,6 +58,7 @@ html[data-theme="dark"] {
   --glow-tech-gold: rgba(179, 163, 105, 0.151); 
   --glow-red: rgba(172, 0, 0, 0.233); 
   --glow-purple-2: rgba(226, 170, 217, 0.199); 
+  --glow-blue-2: rgba(100, 98, 218, 0.288);
 
 
   --glow-base-top: rgba(255,255,255,.06);
@@ -108,6 +111,7 @@ body::before {
     radial-gradient(var(--g5-size-x) var(--g5-size-y) at var(--g5-x) var(--g5-y), var(--g5-color), transparent 50%),
     radial-gradient(var(--g6-size-x) var(--g6-size-y) at var(--g6-x) var(--g6-y), var(--g6-color), transparent 50%),
     radial-gradient(var(--g7-size-x) var(--g7-size-y) at var(--g7-x) var(--g7-y), var(--g7-color), transparent 50%),
+    radial-gradient(var(--g8-size-x) var(--g8-size-y) at var(--g8-x) var(--g8-y), var(--g8-color), transparent 50%),
     linear-gradient(180deg, var(--glow-base-top), var(--glow-base-bot));
 }
 
@@ -143,7 +147,7 @@ body::after {
   padding: 64px 24px;
 }
 
-.section-3{
+.section-3, .section-4{
   position: relative;        /* <-- makes .timeline absolute relative to section 3 */
   justify-content: flex-start; /* optional: don’t center the line vertically */
   overflow: visible;
