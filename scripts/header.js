@@ -34,7 +34,7 @@ if(isMobileOrPC() === 'pc')
 else if (isMobileOrPC() === 'mobile')
 {
     headerHTML =
-    `
+   `
     <a href="#About" class="header-logo">Allan Kangethe</a>
         <div class="header-buttons">
             <button id="themeToggle">
@@ -45,12 +45,12 @@ else if (isMobileOrPC() === 'mobile')
             </button>
         </div>
         <div id="drop-menu" class="drop-down">
+            <p class="menu-text">Menu</p>
             <a href="#About" class="menu-item js-menu-item">About</a>
             <a href="#Skills" class="menu-item js-menu-item">Skills</a>
             <a href="#Timeline" class="menu-item js-menu-item">Timeline</a> 
             <a href="#Projects" class="menu-item js-menu-item">Projects</a> 
         </div>
-    
     `;
     
 }
@@ -60,12 +60,20 @@ document.querySelector(".js-header").innerHTML = headerHTML;
 // Menu Button Drop down
 const button = document.getElementById("menuToggle");
 const menu = document.getElementById("drop-menu");
+const menuItems = document.querySelectorAll(".js-menu-item");
 
 button.addEventListener("click", () =>
 {
     menu.classList.toggle("show");
 });
 
+menuItems.forEach((item) =>
+{
+    item.addEventListener("click", () =>
+    {
+        menu.classList.remove("show");
+    });
+});
 
 
 

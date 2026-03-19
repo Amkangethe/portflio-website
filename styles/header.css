@@ -29,7 +29,7 @@ html[data-theme="dark"]{
   height: auto;
 
   justify-content: space-around;
-  align-items: baseline;
+  
 
   /* “spreads to the sides” look: corner lighting + subtle vertical tone */
   /* glass look */
@@ -147,11 +147,16 @@ html[data-theme="dark"]{
   display: flex;
   position: absolute;
   flex-direction: column;
+  align-items: start;
+  row-gap: 15px;
+  padding-left: 10px;
   top: 0;
   right: 0;
   width: 65%;
   height:300px;
-  background-color: red;
+  background-color: var(--page-bg);
+  border: 1px rgb(0, 0, 0) solid;
+  font-size: 30px;
   
 }
 
@@ -163,10 +168,40 @@ html[data-theme="dark"]{
     transition: opacity 0s ease, transform 0.3s ease, visibility 0s ease;
     width: 0px;
     height: 0px;
+    
 
 }
 
+.menu-text
+{
+  margin: 0px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.drop-down .menu-item::after
+{
+  display: none;
+}
+
+.drop-down .menu-item.is-active::after
+{
+  display: none;
+}
+
+.drop-down .menu-item.is-active
+{
+  color: var(--profile-role-text);
+}
+
+
 @media (max-width: 900px)
 {
+  .menu-item
+  {
+    margin-left: 0px;
+    color: var(--text);
+  }
   
 }
