@@ -16,9 +16,6 @@ let projectsHTML = '';
 
 projects.forEach((project) => {
     
-    project.technologies.forEach((technology) => {
-        console.log(technology);
-    });
     projectsHTML += 
     `
     <div class="project-card">

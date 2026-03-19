@@ -29,7 +29,7 @@ html[data-theme="dark"]{
   height: auto;
 
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
 
   /* “spreads to the sides” look: corner lighting + subtle vertical tone */
   /* glass look */
@@ -109,8 +109,13 @@ html[data-theme="dark"]{
   transform: scaleX(1);
 }
 
+.header-buttons
+{
+  display: flex;
+  margin-left: 130px;
+}
 
-#themeToggle
+#themeToggle, #menuToggle
 {
    background-color: transparent;
    border-radius: 10px;
@@ -125,5 +130,43 @@ html[data-theme="dark"]{
   height: 15px;
   filter: var(--dark-icon)
 
+}
+
+.menu
+{
+  height: 15px;
+  filter: var(--dark-icon)
+
+}
+
+.drop-down.show
+{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height:300px;
+  background-color: red;
+  
+}
+
+.drop-down
+{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(120px);
+    transition: opacity 0s ease, transform 0.3s ease, visibility 0s ease;
+    width: 0px;
+    height: 0px;
+
+}
+
+@media (max-width: 900px)
+{
   
 }
