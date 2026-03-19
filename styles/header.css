@@ -54,6 +54,7 @@ html[data-theme="dark"]{
   font-size: 25px;
   padding: 10px 0;
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .header-logo:hover
