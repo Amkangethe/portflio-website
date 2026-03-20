@@ -97,24 +97,44 @@ if (menu_back_button && menu)
 
 // --------------------------------------------------------------------------------------
 // Toggle Dark and Light Theme
+// Toggle Dark and Light Theme
 const root = document.documentElement;
 const icon = document.getElementById("themeIcon");
+const themeToggle = document.getElementById("themeToggle");
 
-const ICON_LIGHT = "./icons/header/sun.png";   // shown when theme is light
-const ICON_DARK  = "./icons/header/moon.png";  // shown when theme is dark
+const ICON_LIGHT = "./icons/header/sun.png";
+const ICON_DARK  = "./icons/header/moon.png";
 
-const setIcon = () => {
-	const isDark = root.dataset.theme === "dark";
-	icon.src = isDark ? ICON_DARK : ICON_LIGHT; // click shows opposite action
+// load saved theme
+let currentTheme = localStorage.getItem("currentTheme");
+
+if (!currentTheme)
+{
+    currentTheme = "dark"; // default theme
+}
+
+root.dataset.theme = currentTheme;
+
+const setIcon = () =>
+{
+    const isDark = root.dataset.theme === "dark";
+    icon.src = isDark ? ICON_DARK : ICON_LIGHT;
 };
 
-document.getElementById("themeToggle").onclick = () => {
-	root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-	setIcon();
-};
+if (themeToggle && icon)
+{
+    themeToggle.addEventListener("click", () =>
+    {
+        const newTheme = root.dataset.theme === "dark" ? "light" : "dark";
+        root.dataset.theme = newTheme;
+        localStorage.setItem("currentTheme", newTheme);
+        setIcon();
+    });
+}
 
-// set correct icon on initial load (if you set data-theme in HTML/CSS)
 setIcon();
+
+
 // --------------------------------------------------------------------------------------
 // Menu Button Underline			
 document.querySelectorAll(".js-menu-item").forEach((link) => {
