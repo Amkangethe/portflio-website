@@ -4,9 +4,9 @@ projects = [{
         thumbnail : 'icons/projects/breast-cancer.png',
         title: 'Breast Cancer Classifier', 
         description: 'Built a deep learning image-classification model to identify' +
-        'breast tissue images as cancerous or non-cancerous. Used TensorFlow/Keras' +
-        'with a pretrained ResNet50 backbone, prepared training/validation/test datasets,' +
-        'and evaluated model performance for medical image classification.',
+        ' breast tissue images as cancerous or non-cancerous. Used TensorFlow/Keras' +
+        ' with a pretrained ResNet50 backbone, prepared training/validation/test datasets,' +
+        ' and evaluated model performance for medical image classification.',
         technologies : ['Python', 'TensorFlow', 'Keras', 'ResNet50', 
             'NumPy', 'Matplotlib', 'Pandas', 'Scikit-learn','Jupyter Notebook'],
         link : 'https://github.com/Nalan12/AI4ALL_Project'
