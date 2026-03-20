@@ -81,6 +81,7 @@ html[data-theme="dark"] {
 
   padding-top: 50px;
   padding-bottom: 18px; /* space between icons and line */
+  margin-bottom: 40px;
 }
 
 .external-links::after
@@ -140,6 +141,7 @@ html[data-theme="dark"] {
     .external-links
     {
         padding-top: 40px;
+        margin-bottom: 0px;
     }
     
     
