@@ -32,10 +32,10 @@
   --g4-x: 930px;   --g4-y: 1810px;   --g4-size-x: 1200px; --g4-size-y: 650px; --g4-color: var(--glow-purple);
 
    /* Section 3 */
-  --g5-x: 1250px;  --g5-y: 2500px;   --g5-size-x: 500px; --g5-size-y: 250px; --g5-color: var(--glow-tech-gold);
-  --g6-x: 1250px;  --g6-y: 3100px;  --g6-size-x: 500px; --g6-size-y: 350px; --g6-color: var(--glow-red);
-  --g7-x: 1250px;  --g7-y: 3425px;  --g7-size-x: 400px; --g7-size-y: 250px; --g7-color: var(--glow-purple-2);
-  --g8-x: 600px;  --g8-y: 2750px;  --g8-size-x: 400px; --g8-size-y: 250px; --g8-color: var(--glow-blue-2);
+  --g5-x: 1250px;  --g5-y: 2540px;   --g5-size-x: 500px; --g5-size-y: 250px; --g5-color: var(--glow-tech-gold);
+  --g6-x: 1250px;  --g6-y: 3140px;  --g6-size-x: 500px; --g6-size-y: 350px; --g6-color: var(--glow-red);
+  --g7-x: 1250px;  --g7-y: 3475px;  --g7-size-x: 400px; --g7-size-y: 250px; --g7-color: var(--glow-purple-2);
+  --g8-x: 600px;  --g8-y: 2800px;  --g8-size-x: 400px; --g8-size-y: 250px; --g8-color: var(--glow-blue-2);
 
   
 }
