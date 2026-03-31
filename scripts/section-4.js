@@ -10,6 +10,16 @@ projects = [{
         technologies : ['Python', 'TensorFlow', 'Keras', 'ResNet50', 
             'NumPy', 'Matplotlib', 'Pandas', 'Scikit-learn','Jupyter Notebook'],
         link : 'https://github.com/Nalan12/AI4ALL_Project'
+    },{
+        thumbnail : 'icons/projects/feedback-tutor.png',
+        title: 'AI Code Feedback Tutor',
+        description: 'Designed and built an AI-powered tutoring tool for beginner' +
+        ' programmers that evaluates Python code with automated tests and delivers' +
+        ' scaffolded feedback in three stages: Socratic hint, code review, and worked' +
+        ' example. Built the full-stack prototype using Flask, JavaScript, and Pytest,' +
+        ' with LLM integration for adaptive educational feedback.',
+        technologies : ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'Pytest', 'Ollama', 'JSON', 'Git'],
+        link : 'https://github.com/Amkangethe/CS6460-Project'
     }
 ];
 let projectsHTML = '';

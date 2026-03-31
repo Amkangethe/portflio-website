@@ -73,7 +73,7 @@ html[data-theme="dark"] {
 {
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: fit-content;
     min-height: 400px;
     width:450px;
     border-radius: 18px;
@@ -104,7 +104,7 @@ html[data-theme="dark"] {
 .project-card-thumnail-img
 {
     height: 200px;
-    background: radial-gradient(circle at 50% 50%, rgb(70, 191, 228) 0%, transparent 62%);
+    /* background: radial-gradient(circle at 50% 50%, rgb(70, 191, 228) 0%, transparent 62%); */
     background-size: 120px 120px;
     background-repeat: no-repeat;
     background-position: center;
