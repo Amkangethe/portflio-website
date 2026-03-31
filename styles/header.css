@@ -46,6 +46,8 @@ html[data-theme="dark"]{
   box-shadow:
     0 12px 40px -20px var(--header-shadow),
     var(--header-inset);
+
+  cursor: default;
 }
 
 .header-logo
