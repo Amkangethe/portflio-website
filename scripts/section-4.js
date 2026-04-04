@@ -21,7 +21,7 @@ projects = [{
         ' with LLM integration for adaptive educational feedback.',
         technologies : ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'Pytest', 'Ollama', 'JSON', 'Git'],
         link : 'https://github.com/Amkangethe/CS6460-Project',
-        presentation : 'notice.html'
+        presentation : './notice.html'
     }
 ];
 let projectsHTML = '';
