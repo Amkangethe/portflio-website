@@ -9,7 +9,8 @@ projects = [{
         ' and evaluated model performance for medical image classification.',
         technologies : ['Python', 'TensorFlow', 'Keras', 'ResNet50', 
             'NumPy', 'Matplotlib', 'Pandas', 'Scikit-learn','Jupyter Notebook'],
-        link : 'https://github.com/Nalan12/AI4ALL_Project'
+        link : 'https://github.com/Nalan12/AI4ALL_Project',
+        presentation : ''
     },{
         thumbnail : 'icons/projects/feedback-tutor.png',
         title: 'AI Code Feedback Tutor',
@@ -19,7 +20,8 @@ projects = [{
         ' example. Built the full-stack prototype using Flask, JavaScript, and Pytest,' +
         ' with LLM integration for adaptive educational feedback.',
         technologies : ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'Pytest', 'Ollama', 'JSON', 'Git'],
-        link : 'https://github.com/Amkangethe/CS6460-Project'
+        link : 'https://github.com/Amkangethe/CS6460-Project',
+        presentation : 'notice.html'
     }
 ];
 let projectsHTML = '';
@@ -43,10 +45,27 @@ projects.forEach((project) => {
             });
     projectsHTML += `
             </div>
-            <a class="project-code-button" href="${project.link}" target="_blank"  rel="noopener noreferrer">
-                <img class="project-code-img" src="icons/skills/github-code.png" alt="" />
-                <span class="project-code-text">Code</span>
-            </a>
+            <div style="
+                display: flex;
+                justify-content: space-between;
+                align-items: top;">
+                <a class="project-code-button" href="${project.link}" target="_blank"  rel="noopener noreferrer">
+                    <img class="project-code-img" src="icons/skills/github-code.png" alt="" />
+                    <span class="project-code-text">Code</span>
+                </a>`;
+                
+                if(project.presentation !== '')
+                {
+                    projectsHTML += `
+                    <a class="project-presentation-button" href="${project.presentation}" target="_parent"  rel="noopener noreferrer">
+                        <img class="project-presentation-img" src="icons/projects/presentation.png" alt="" />
+                        <span class="project-presentation-text">Presentation</span>
+                    </a>`;
+                }
+                
+            
+            projectsHTML += `
+            </div>
         </div>
     </div>	
     `;
