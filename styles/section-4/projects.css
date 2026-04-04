@@ -214,6 +214,13 @@ html[data-theme="dark"] {
     margin: 0;
 }
 
+.project-buttons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
 @media (max-width: 900px)
 {
     .project-card
@@ -232,6 +239,25 @@ html[data-theme="dark"] {
         grid-template-columns: repeat(1, minmax(0, 1fr));
 
     }
+
+    .project-buttons
+    {
+        display: flex;
+        gap: 5px;
+        align-items: top;
+    }
+
+    .project-code-button, .project-presentation-button
+    {
+        height: 30px;
+
+    }
+
+    .project-code-img, .project-presentation-img
+    {
+        height: 20px;
+    }
+
 
 
 

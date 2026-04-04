@@ -45,10 +45,7 @@ projects.forEach((project) => {
             });
     projectsHTML += `
             </div>
-            <div style="
-                display: flex;
-                justify-content: space-between;
-                align-items: top;">
+            <div class="project-buttons">
                 <a class="project-code-button" href="${project.link}" target="_blank"  rel="noopener noreferrer">
                     <img class="project-code-img" src="icons/skills/github-code.png" alt="" />
                     <span class="project-code-text">Code</span>
@@ -63,7 +60,6 @@ projects.forEach((project) => {
                     </a>`;
                 }
                 
-            
             projectsHTML += `
             </div>
         </div>
