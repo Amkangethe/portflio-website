@@ -14,11 +14,11 @@ projects = [{
     },{
         thumbnail : 'icons/projects/socratic-model.png',
         title: 'Socratic Feedback Model',
-        description: 'Designed and built an AI-powered tutoring tool for beginner' +
-        ' programmers that evaluates Python code with automated tests and delivers' +
-        ' scaffolded feedback in three stages: Socratic hint, code review, and worked' +
-        ' example. Built the full-stack prototype using Flask, JavaScript, and Pytest,' +
-        ' with LLM integration for adaptive educational feedback.',
+        description: 'Designed and built Vinci, an AI-powered Socratic tutoring tool for beginner Python programmers.' +
+        'Students progress through three scaffolded stages; Socratic questioning, automated code review via Pytest, ' +
+        'and a worked solution — guided by an LLM that adapts its feedback to each stage. Features include a pre-challenge ' +
+        'knowledge check, per-session analytics logging, a completion tracker, and sample buggy attempts for simulation. ' +
+        'Built full-stack with Flask, vanilla JavaScript, and Pytest, with LLM integration via the Ollama API.',
         technologies : ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'Pytest', 'Ollama', 'JSON', 'Git'],
         link : 'https://github.com/Amkangethe/final-project',
         presentation : 'https://akanget1.pythonanywhere.com/'
