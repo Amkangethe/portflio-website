@@ -21,7 +21,7 @@ projects = [{
         ' with LLM integration for adaptive educational feedback.',
         technologies : ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'Pytest', 'Ollama', 'JSON', 'Git'],
         link : 'https://github.com/Amkangethe/final-project',
-        presentation : './notice.html'
+        presentation : 'https://akanget1.pythonanywhere.com/'
     }
 ];
 let projectsHTML = '';
@@ -56,7 +56,7 @@ projects.forEach((project) => {
                     projectsHTML += `
                     <a class="project-presentation-button" href="${project.presentation}" target="_parent"  rel="noopener noreferrer">
                         <img class="project-presentation-img" src="icons/projects/presentation.png" alt="" />
-                        <span class="project-presentation-text">Presentation</span>
+                        <span class="project-presentation-text">Demo</span>
                     </a>`;
                 }
                 
