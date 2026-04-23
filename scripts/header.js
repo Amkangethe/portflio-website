@@ -2,13 +2,7 @@
 // Display Header for Mobile or PC
 function isMobileOrPC() {
   const isMobile = window.matchMedia("(any-pointer:coarse)").matches;
-  if (isMobile) {
-    console.log("Device is likely mobile/touch-based.");
-    return 'mobile';
-  } else {
-    console.log("Device is likely a PC/desktop (fine pointer available).");
-    return 'pc';
-  }
+  return isMobile ? 'mobile' : 'pc';
 }
 
 

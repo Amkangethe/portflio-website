@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------
 // Projects Section
-projects = [{
+const projects = [{
         thumbnail : 'icons/projects/breast-cancer.png',
         title: 'Breast Cancer Classifier', 
         description: 'Built a deep learning image-classification model to identify' +
@@ -54,7 +54,7 @@ projects.forEach((project) => {
                 if(project.presentation !== '')
                 {
                     projectsHTML += `
-                    <a class="project-presentation-button" href="${project.presentation}" target="_parent"  rel="noopener noreferrer">
+                    <a class="project-presentation-button" href="${project.presentation}" target="_blank"  rel="noopener noreferrer">
                         <img class="project-presentation-img" src="icons/projects/presentation.png" alt="" />
                         <span class="project-presentation-text">Demo</span>
                     </a>`;
